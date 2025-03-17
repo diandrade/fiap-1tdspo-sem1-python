@@ -5,9 +5,9 @@ faça a troca de seus valores e, no final, exiba p e q.
 (Corrigir)
 '''
 
-p = int(input("Insira um valor: "))
-q = int(input("Insira outro valor: "))
+p = int(input("Insira P: "))
+q = int(input("Insira Q: "))
 x = p
-q = x
 p = q
-print(p, q)
+q = x
+print(f"P: {p}", f"Q: {q}")

@@ -15,8 +15,11 @@ Calcule e escreva o salário final do vendedor.
 	G. Mostre o resultado da soma final.
 '''
 
-quantidade_de_carros_vendidos = float(input("Insira a quantidade de carros vendidos: "))
-valor_da_venda = float(input("Insira o valor por venda: "))
+quantidade_de_carros_vendidos = int(input("Insira a quantidade de carros vendidos: "))
+valor_total_vendas = float(input("Insira o valor total das vendas: "))
 salario_fixo_do_vendedor = float(input("Insira o valor do salário fixo: "))
-comissao_por_venda = float(input("Insira o valor da comissão por venda (em número decimal Ex: 10% -> 0.10): "))
-print(f"O salário final do vendedor será: {((quantidade_de_carros_vendidos * valor_da_venda) * comissao_por_venda) + salario_fixo_do_vendedor}")
+comissao_por_venda = float(input("Insira o valor fixo da comissão por carro vendido: "))
+
+print(
+    f"O salário final do vendedor será: {((quantidade_de_carros_vendidos * comissao_por_venda) + (valor_total_vendas * 0.05) + salario_fixo_do_vendedor):.2f}")
+
