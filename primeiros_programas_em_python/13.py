@@ -12,5 +12,9 @@ calcular e escrever o custo final ao consumidor.
 '''
 
 custo_de_fabrica = float(input("Insira o custo de fabricação: "))
-print(f"O custo final ao consumidor é: {(custo_de_fabrica * 1.28) * 1.45}")
+percent_distribudor = custo_de_fabrica * 0.28
+percent_impostos = custo_de_fabrica * 0.45
+custo_final = custo_de_fabrica + percent_distribudor + percent_impostos
+
+print(f"O custo final ao consumidor é: {custo_final:.2f}")
 

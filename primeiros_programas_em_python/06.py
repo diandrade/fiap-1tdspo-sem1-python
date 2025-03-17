@@ -6,4 +6,6 @@ considerando que cada kWh custa R$ 0,20.
 '''
 
 kWh_consumido = int(input("Insira a quantidade de energia consumida: "))
-print(f"O valor final de sua conta de energia será: R${kWh_consumido * 0.2}")
+total_conta = kWh_consumido * 0.2
+
+print(f"O valor final de sua conta de energia será: R${total_conta:.2f}")

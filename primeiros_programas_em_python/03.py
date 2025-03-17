@@ -5,4 +5,6 @@ DICA: para fazer o acréscimo, multiplique o valor do salário por 1,20.
 '''
 
 salario_funcionario = float(input("Qual é seu salário? "))
-print(f"O salário do funcionário é {salario_funcionario * 1.20}")
+salario_acrescimo = salario_funcionario * 1.20
+
+print(f"O salário do funcionário é {salario_acrescimo:.2f}")

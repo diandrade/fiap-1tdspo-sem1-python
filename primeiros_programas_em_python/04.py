@@ -4,6 +4,8 @@ calcule o IMC (índice de massa corpórea) por meio da fórmula:
 IMC = peso/altura*altura. Por fim, exiba o valor do IMC.
 '''
 
-peso = float(input("Insira seu peso: "))
-altura = float(input("Insira sua altura: "))
-print(f"O IMC da pessoa é: {peso / (altura * 2)}")
+peso_pessoa = float(input("Insira seu peso em KG: "))
+altura_pessoa = float(input("Insira sua altura em Metros: "))
+imc = peso_pessoa / altura_pessoa ** 2
+
+print(f"O IMC da pessoa é: {imc:.2f}")

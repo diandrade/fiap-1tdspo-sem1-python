@@ -4,8 +4,8 @@ faça a soma, subtração e multiplicação.
 Por fim, mostre os resultados.
 '''
 
-num1 = int(input("Digite o primeiro número inteiro: "))
-num2 = int(input("Digite o segundo número inteiro: "))
+num1 = float(input("Digite o primeiro número inteiro: "))
+num2 = float(input("Digite o segundo número inteiro: "))
 
 soma = num1 + num2
 subtracao = num1 - num2

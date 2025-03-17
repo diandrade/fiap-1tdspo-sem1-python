@@ -6,4 +6,6 @@ Calcule quantos km/l o carro percorreu (autonomia) e exiba na tela.
 
 quilometragem_parcial = float(input("Insira a quilometragem parcial de um carro em determinado espaço: "))
 litros_gastos = float(input("Insira quantos litros foram gastos para percorrer esta quilometragem: "))
-print(f"A quantidade de km/l que o veículo percorreu é: {quilometragem_parcial/litros_gastos}")
+
+km_l = quilometragem_parcial/litros_gastos
+print(f"A quantidade de km/l que o veículo percorreu é: {km_l:.2f}")

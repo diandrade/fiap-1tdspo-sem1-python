@@ -7,7 +7,9 @@ faça a troca de seus valores e, no final, exiba p e q.
 
 p = int(input("Insira P: "))
 q = int(input("Insira Q: "))
-x = p
+
+aux = p
 p = q
-q = x
+q = aux
+
 print(f"P: {p}", f"Q: {q}")

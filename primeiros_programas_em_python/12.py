@@ -13,8 +13,10 @@ Por fim, exiba a idade da pessoa expressa apenas em dias.
 	G. Mostre o resultado da soma final.
 '''
 
-anos = int(input("Quantos anos você têm? "))
-meses = int(input("Quantos meses se passaram desde seu último aniversário: "))
-dias = int(input("Quantos dias se passaram desde o começo do mês atual? "))
+idade_anos = int(input("Quantos anos você têm? "))
+idade_meses = int(input("Quantos meses se passaram desde seu último aniversário: "))
+idade_dias = int(input("Quantos dias se passaram desde o começo do mês atual? "))
 
-print(f"A idade da pessoa expressa apenas em dias é: {((anos * 365) + (meses * 30)) + dias}")
+conversao_dias = idade_anos * 365 + idade_meses * 30 + idade_dias
+
+print(f"A idade da pessoa expressa apenas em dias é: {conversao_dias}")

@@ -4,6 +4,8 @@ calcule sua área por meio da fórmula: area = (base x altura)/2.
 Por fim, exiba a área do triângulo.
 '''
 
-base = int(input("Base: "))
-altura = int(input("Altura: "))
-print(f"A área é: {(base * altura) / 2}")
+base_triangulo = float(input("Base: "))
+altura_triangulo = float(input("Altura: "))
+area_triangulo = (base_triangulo * altura_triangulo) / 2
+
+print(f"A área é: {area_triangulo:.2f}")
