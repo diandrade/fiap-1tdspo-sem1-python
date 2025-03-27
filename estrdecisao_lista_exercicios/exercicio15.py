@@ -16,19 +16,16 @@ OBS: utilize a estrutura de decisão match...case.
 
 plano_trabalho = input("Insira seu plano de trabalho (entre A, B e C): ").upper()
 
-if plano_trabalho != 'A' and plano_trabalho != 'B' and plano_trabalho != 'C':
-    print("Insira um valor entre A, B e C.")
+if plano_trabalho == 'A' or plano_trabalho == 'B' or plano_trabalho == 'C':
+    percentual_A = 1.10
+    percentual_B = 1.15
+    percentual_C = 1.20
 
-salario_atual = float(input("Insira seu salário atual: "))
+    salario_atual = float(input("Insira seu salário atual: "))
 
-percentual_A = 1.10
-percentual_B = 1.15
-percentual_C = 1.20
+    if salario_atual <= 0:
+        print("Insira um valor positivo.")
 
-if salario_atual <= 0:
-    print("Insira um valor positivo.")
-
-else:
     match plano_trabalho:
         case 'A':
             salario_aumento = percentual_A * salario_atual
@@ -39,6 +36,9 @@ else:
         case 'C':
             salario_aumento = percentual_C * salario_atual
             print(f"O salário com acrescimo do funcionário será {salario_aumento:.2f}")
+
+else:
+    print("Insira um valor entre A, B e C.")
 
 
 

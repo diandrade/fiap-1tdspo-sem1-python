@@ -16,10 +16,10 @@ Escolha do usuário Operação
 OBS: utilize a estrutura de decisão match...case.
 '''
 
-print("1 - Média entre os números digitados")
-print("2 - Maior valor dos números digitados")
-print("3 - Menor valor dos números digitados")
-print("4 - Divisão inteira dos números digitados")
+print("1 - Média entre os números digitados.")
+print("2 - Maior valor dos números digitados.")
+print("3 - Menor valor dos números digitados.")
+print("4 - Divisão inteira dos números digitados.")
 operacao_escolhida = int(input("Insira o modelo de operação escolhida: "))
 
 if 1 <= operacao_escolhida <= 4:
@@ -29,7 +29,7 @@ if 1 <= operacao_escolhida <= 4:
     match operacao_escolhida:
         case 1:
             media = (num1 + num2) / 2
-            print(f"A operação escolhida foi média, e o resultado é {media}")
+            print(f"A operação escolhida foi média, e o resultado é {media:.2f}")
         case 2:
             maior = max(num1, num2)
             print(f"A operação escolhida foi maior dos números dígitados, e o resultado é {maior}")
@@ -41,6 +41,6 @@ if 1 <= operacao_escolhida <= 4:
                 print("Erro: divisão por zero!")
             else:
                 divisao_inteira = num1 // num2
-                print(f"A operação escolhida foi divisão inteira, e o resultado é: " + divisao_inteira)
+                print(f"A operação escolhida foi divisão inteira, e o resultado é: {divisao_inteira}")
 else:
     print("Insira uma operação válida!")
