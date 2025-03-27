@@ -6,8 +6,24 @@ das horas extras,
 caso tenham sido trabalhadas (considere que o mês possua 4 semanas exatas).
 '''
 
-jornada_semanal = int(input("Qual é a jornada semanal do funcionário?"))
-horas_trabalhadas_mes = int(input("Qual é o número de horas trabalhadas no mês do funcionário? "))
-salario_hora = float(input("Qual é o salário por hora do funcionário?"))
+horas_trabalhadas = int(input("Insira a quantidade de horas trabalhadas de um funcionário: "))
+if horas_trabalhadas < 0:
+    print("Não são válidos números menores que 0.")
+else:
+    valor_hora_regular = float(input("Insira o salário por hora de um funcionário: "))
+    if valor_hora_regular < 0:
+        print("Não são válidos números menores que 0.")
+    else:
+        qtd_extras = (horas_trabalhadas - 40)
+        qtd_regular = horas_trabalhadas - qtd_extras
+        salario_regular = valor_hora_regular * qtd_regular
 
-salario_semana = jornada_semanal * salario_hora
+        if qtd_extras > 0:
+            valor_hora_extra = valor_hora_regular * 1.50
+            salario_adicional = valor_hora_extra * qtd_extras
+            salario_final = salario_adicional + salario_regular
+            print(f"O salário final do funcionário a partir do total de {horas_trabalhadas} "
+                  f"horas trabalhadas será de R${salario_final:.2f}")
+        else:
+            print(f"O salário final do funcionário a partir do total de {horas_trabalhadas} "
+                  f"horas trabalhadas será de R${salario_regular:.2f}")

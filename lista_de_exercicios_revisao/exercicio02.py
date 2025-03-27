@@ -8,7 +8,6 @@ idade = int(input("Insira a idade do cliente: "))
 
 if idade <= 0:
     print("Insira um valor positivo e numérico.")
-
 else:
     if idade <= 18:
         print("Você pagará R$10,00")

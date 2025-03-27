@@ -10,21 +10,37 @@ total da compra simulada.
 '''
 
 qtd_caneta = int(input("Quantas canetas a mãe irá comprar? "))
-qtd_caderno = int(input("Quantos cadernos a mãe irá comprar? "))
-qtd_lapis = int(input("Quantos lapis a mãe irá comprar? "))
+if qtd_caneta < 1:
+    print("O valor não pode ser inferior a 1.")
+else:
+    qtd_caderno = int(input("Quantos cadernos a mãe irá comprar? "))
+    if qtd_caderno < 1:
+        print("O valor não pode ser inferior a 1.")
+    else:
+        qtd_lapis = int(input("Quantos lapis a mãe irá comprar? "))
+        if qtd_lapis <1:
+            print("O valor não pode ser inferior a 1.")
+        else:
+            valor_caneta = float(input("Qual é o valor da caneta? "))
+            if valor_caneta < 0:
+                print("O valor não pode ser inferior a 0.")
+            else:
+                valor_caderno = float(input("Qual é o valor do caderno? "))
+                if valor_caderno < 0:
+                    print("O valor não pode ser inferior a 0.")
+                else:
+                    valor_lapis = float(input("Qual é o valor do lapis? "))
+                    if valor_lapis < 0:
+                        print("O valor não pode ser inferior a 0.")
+                    else:
+                        desconto_caderno = valor_caderno - (valor_caderno * 0.20)
+                        desconto_caneta = valor_caneta - (valor_caneta * 0.05)
 
-valor_caneta = float(input("Qual é o valor da caneta? "))
-valor_caderno = float(input("Qual é o valor do caderno? "))
-valor_lapis = float(input("Qual é o valor do lapis? "))
+                        total_caneta = qtd_caneta * desconto_caneta
+                        total_caderno = qtd_caderno * desconto_caderno
+                        total_lapis = qtd_lapis * valor_lapis
 
-desconto_caderno = valor_caderno - (valor_caderno * 0.20)
-desconto_caneta = valor_caneta - (valor_caneta * 0.05)
+                        valor_total = total_lapis + total_caderno + total_caneta
 
-total_caneta = qtd_caneta * desconto_caneta
-total_caderno = qtd_caderno * desconto_caderno
-total_lapis = qtd_lapis * valor_lapis
-
-valor_total = total_lapis + total_caderno + total_caneta
-
-print(f"A soma total da compra simulada é R${valor_total:.2f}")
+                        print(f"A soma total da compra simulada é R${valor_total:.2f}")
 

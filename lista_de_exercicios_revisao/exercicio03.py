@@ -11,16 +11,28 @@ porcao_pasteis = 25.00
 cervejas = 18.00
 
 qtd_amigos = int(input("Quantos amigos participaram do happy hour? "))
-qtd_fritas = int(input("Insira a quantidade de porções de batata frita: "))
-qtd_pasteis = int(input("Insira a quantidade de pastéis pedidos: "))
-qtd_cervejas = int(input("Insira a quantidade de cervejas pedidas: "))
+if qtd_amigos <= 0:
+    print("O número de amigos deve ser maior que 0.")
+else:
+    qtd_fritas = int(input("Insira a quantidade de porções de batata frita: "))
+    if qtd_fritas < 0:
+        print("O número de amigos deve ser maior que 0.")
+    else:
+        qtd_pasteis = int(input("Insira a quantidade de pastéis pedidos: "))
+        if qtd_pasteis < 0:
+            print("O número de amigos deve ser maior que 0.")
+        else:
+            qtd_cervejas = int(input("Insira a quantidade de cervejas pedidas: "))
+            if qtd_cervejas < 0:
+                print("O número de amigos deve ser maior que 0.")
+                exit()
 
-total_fritas = porcao_fritas * qtd_fritas
-total_pasteis = porcao_pasteis * qtd_pasteis
-total_cervejas = cervejas * qtd_cervejas
+            total_fritas = porcao_fritas * qtd_fritas
+            total_pasteis = porcao_pasteis * qtd_pasteis
+            total_cervejas = cervejas * qtd_cervejas
 
-valor_total = total_cervejas + total_fritas + total_pasteis
-valor_individual = valor_total / qtd_amigos
+            valor_total = total_cervejas + total_fritas + total_pasteis
+            valor_individual = valor_total / qtd_amigos
 
-print(f"O valor total da conta é {valor_total}")
-print(f"O valor individual da conta é {valor_individual}")
+            print(f"O valor total da conta é {valor_total:.2f}")
+            print(f"O valor individual da conta é {valor_individual:.2f}")
