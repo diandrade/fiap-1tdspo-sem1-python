@@ -24,6 +24,8 @@ Escreva um programa em Python que solicite ao usuário o número de litros vendi
 (codificado da seguinte forma: A-álcool, G-gasolina ou D-Diesel), calcule e imprima o valor a ser pago pelo cliente
 sabendo-se que o preço do litro da gasolina é R$ 6,09, o preço do litro do álcool é R$ 4,04
 e o preço do litro do Diesel é R$ 5,93.
+
+(Corrigir exercício)
 '''
 
 print("----- MENU DE COMBUSTÍVEIS -----")

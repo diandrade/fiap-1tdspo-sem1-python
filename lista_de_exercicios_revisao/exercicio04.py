@@ -14,7 +14,7 @@ else:
     if valor_hora_regular < 0:
         print("Não são válidos números menores que 0.")
     else:
-        qtd_extras = (horas_trabalhadas - 40)
+        qtd_extras = (horas_trabalhadas - 160)
         qtd_regular = horas_trabalhadas - qtd_extras
         salario_regular = valor_hora_regular * qtd_regular
 
@@ -25,5 +25,6 @@ else:
             print(f"O salário final do funcionário a partir do total de {horas_trabalhadas} "
                   f"horas trabalhadas será de R${salario_final:.2f}")
         else:
+            salario_regular = valor_hora_regular * horas_trabalhadas
             print(f"O salário final do funcionário a partir do total de {horas_trabalhadas} "
                   f"horas trabalhadas será de R${salario_regular:.2f}")

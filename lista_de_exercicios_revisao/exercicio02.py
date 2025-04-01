@@ -6,12 +6,12 @@ e crianças (menos de 18 anos) pagam $10.
 
 idade = int(input("Insira a idade do cliente: "))
 
-if idade <= 0:
-    print("Insira um valor positivo e numérico.")
+if 10 <= idade <= 85:
+    print("Insira um valor entre 10 e 85.")
 else:
-    if idade <= 18:
-        print("Você pagará R$10,00")
+    if idade < 18:
+        print("Você pagará R$10,00 (Crianças)")
     elif idade <= 64:
-        print("Você pagará R$20,00")
+        print("Você pagará R$20,00 (Adultos)")
     else:
-        print("Você pagará R$15,00")
+        print("Você pagará R$15,00 (Idosos)")
