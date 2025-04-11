@@ -14,37 +14,48 @@ Calcule a média aritmética da turma e informe o resultado no final.
 E exiba na tela a quantidade de alunos: reprovados direto, exame aprovado.
 '''
 
-qtd_notas = 0
-media_aluno = 0
-media_final = 0
-aprovados = 0
+nota = float(input("Insira uma nota: "))
+
+soma_individual = 0
+soma_coletiva = 0
+media_coletiva = 0
+
 reprovados = 0
+aprovados = 0
 exame = 0
-qtd_alunos = 0
 
-nota = float(input("Insira a nota do aluno entre 0 e 10: "))
-if nota < 0:
-    print("Insira um valor entre 0 e 10.")
-else:
-    while 0 <= nota <= 10:
-        nota += float(input("Insira a nota do aluno: "))
-        qtd_notas += 1
+i = 0
+j = 0
 
-        if qtd_notas == 4:
-            media_aluno = nota / qtd_notas
-            if media_aluno < 3.5:
+while nota >= 0:
+    if nota > 10:
+        print("Insira uma nota entre 0 e 10.")
+        break
+    else:
+        if i == 4:
+            media_individual = soma_individual / i
+            print(f"A média individual do aluno é {media_individual:.2f}")
+
+            soma_coletiva += media_individual
+            if media_individual <= 3.5:
                 reprovados += 1
-            elif media_aluno < 7:
+            elif media_individual <= 7:
                 exame += 1
             else:
                 aprovados += 1
 
-        media_final += media_aluno
-        qtd_alunos += 1
-        qtd_notas = 0
-        nota = 0
+            i = 0
+            j += 1
+            media_coletiva = soma_coletiva / j
+        else:
+            soma_individual += nota
+            nota = float(input("Insira uma nota: "))
 
-        media_final /= qtd_alunos
-        print(
-            f"A quantidade de aprovados foi de {aprovados}, de exame foram {exame} e de reprovados foram {reprovados}.")
-        print(f"A média final da turma foi de {media_final:.2f}")
+            i += 1
+
+if media_coletiva > 0:
+    print(
+        f"A quantidade de aprovados foi de {aprovados}, de exame foi de {exame} e de reprovados foram de {reprovados}, "
+        f"além disso, a média aritmética das notas da turma foi de: {media_coletiva}")
+else:
+    print("Insira algum valor!")
