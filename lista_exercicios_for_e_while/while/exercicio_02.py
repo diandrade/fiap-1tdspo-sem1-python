@@ -14,48 +14,32 @@ Calcule a média aritmética da turma e informe o resultado no final.
 E exiba na tela a quantidade de alunos: reprovados direto, exame aprovado.
 '''
 
-nota = float(input("Insira uma nota: "))
-
-soma_individual = 0
-soma_coletiva = 0
-media_coletiva = 0
-
-reprovados = 0
-aprovados = 0
-exame = 0
-
+'''
+OBS: Limite de 4 notas por aluno.
+i = Quantidade de Notas
+j = Quantidade de Médias Incluídas
+'''
 i = 0
 j = 0
 
-while nota >= 0:
-    if nota > 10:
-        print("Insira uma nota entre 0 e 10.")
-        break
-    else:
-        if i == 4:
-            media_individual = soma_individual / i
-            print(f"A média individual do aluno é {media_individual:.2f}")
+soma_aluno = 0
+soma_medias = 0
+media_aritmetica = 0
 
-            soma_coletiva += media_individual
-            if media_individual <= 3.5:
-                reprovados += 1
-            elif media_individual <= 7:
-                exame += 1
-            else:
-                aprovados += 1
-
-            i = 0
-            j += 1
-            media_coletiva = soma_coletiva / j
-        else:
-            soma_individual += nota
-            nota = float(input("Insira uma nota: "))
-
-            i += 1
-
-if media_coletiva > 0:
-    print(
-        f"A quantidade de aprovados foi de {aprovados}, de exame foi de {exame} e de reprovados foram de {reprovados}, "
-        f"além disso, a média aritmética das notas da turma foi de: {media_coletiva}")
+nota_aluno = float(input("Insira uma nota (1): "))
+if nota_aluno < 0:
+    print("Fim do programa")
 else:
-    print("Insira algum valor!")
+    while nota_aluno >= 0:
+        while i <= 3:
+            nota_aluno = float(input(f"Insira a {i + 1}° nota (2): "))
+            if nota_aluno < 0:
+                break
+            else:
+                soma_aluno += nota_aluno
+                i += 1
+        soma_medias += soma_aluno / 4
+        j += 1
+        i = 0
+    media_aritmetica += soma_medias / j
+    print(f"A média aritmética é: {media_aritmetica}")

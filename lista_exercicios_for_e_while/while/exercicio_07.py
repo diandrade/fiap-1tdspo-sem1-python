@@ -18,29 +18,43 @@ menu = """
 3 - Exibir todos os inteiros de 1 até um número x
 """
 
+sim_nao = """
+S - Continuar loop
+N - Finalizar loop
+"""
+
 print(menu)
+continuar = "S"
+while continuar != "N":
 
-escolha = int((input("Insira o número de escolha de acordo com o menu acima: ")))
-if escolha == 1 or escolha == 2 or escolha == 3:
-    num = int(input("Insira um número para realização da operação: "))
+    escolha = int((input("Insira o número de escolha de acordo com o menu acima: ")))
+    if escolha == 1 or escolha == 2 or escolha == 3:
+        num = int(input("Insira um número para realização da operação: "))
 
-    i = 1
+        i = 1
 
-    match escolha:
-        case 1:
-            if num % 6 == 0:
-                print("O valor inserido é divisível por 6")
-            else:
-                print("O valor inserido não é divisível por 6.")
-        case 2:
-            fatorial = 1
-            while i <= num:
-                fatorial *= i
-                i += 1
-            print(f"O fatorial do valor inserido é: {fatorial}")
-        case 3:
-            while i <= num:
-                print(i)
-                i += 1
-else:
-    print("Insira um valor entre 1 e 3.")
+        match escolha:
+            case 1:
+                if num % 6 == 0:
+                    print("O valor inserido é divisível por 6")
+                else:
+                    print("O valor inserido não é divisível por 6.")
+            case 2:
+                fatorial = 1
+                while i <= num:
+                    fatorial *= i
+                    i += 1
+                print(f"O fatorial do valor inserido é: {fatorial}")
+            case 3:
+                while i <= num:
+                    print(i)
+                    i += 1
+
+        continuar = str(input(sim_nao))
+
+        while continuar != 'N' and continuar != 'S':
+            continuar = str(input(sim_nao))
+            break
+
+    else:
+        print("Insira um valor entre 1 e 3.")
