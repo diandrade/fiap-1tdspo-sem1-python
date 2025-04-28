@@ -24,7 +24,6 @@ j = Quantidade de Médias Incluídas
 i = 0
 j = 0
 
-'''
 nota_aluno = 0
 soma_aluno = 0
 soma_medias = 0
@@ -74,30 +73,3 @@ Aprovados: {aprovado}
         print("Nenhum aluno válido foi inserido.")
 else:
     print("Fim do programa")
-'''
-
-soma_notas = 0
-qtde_notas = 0
-qtde_reprovados = 0
-qtde_exame = 0
-qtde_aprovados = 0
-
-nota = float(input("Digite a nota do aluno (nota negativa para sair)"))
-
-while nota >= 0:
-    soma_notas += nota
-    qtde_notas += 1
-    if nota < 3.5:
-        qtde_reprovados += 1
-    elif nota <= 7.0:
-        qtde_exame += 1
-    else:
-        qtde_aprovados += 1
-    nota = float(input("Digite a nota do aluno (nota negativa para sair)"))
-
-media_turma = soma_notas / qtde_notas
-print(f"A média da turma é: {media_turma}")
-print(f"A quantidade de aprovados é: {qtde_aprovados}")
-print(f"A quantidade de reprovados é: {qtde_reprovados}")
-print(f"A quantidade de alunos em exame é: {qtde_exame}")
-

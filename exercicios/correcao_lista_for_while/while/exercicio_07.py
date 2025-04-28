@@ -50,10 +50,10 @@ while continuar != "N":
                     print(i)
                     i += 1
 
-        continuar = str(input(sim_nao))
+        continuar = str(input(sim_nao)).upper()
 
         while continuar != 'N' and continuar != 'S':
-            continuar = str(input(sim_nao))
+            continuar = str(input(sim_nao)).upper()
             break
 
     else:
