@@ -37,6 +37,6 @@ else:
     percentual_150 = 0
 
 print(f"A média salárial da população entrevistada é: R$ {media_salario:.2f}")
-print(f"A média do número de filhos da população entrevistada é: {media_filhos}")
+print(f"A média do número de filhos da população entrevistada é: {media_filhos:.2f}")
 print(f"O maior salário entre a população entrevistada foi de: R$ {maior_salario}")
 print(f"O percentual da população entrevistada com salário menor que R$ 150,00 foi de: {percentual_150:.2f}%")

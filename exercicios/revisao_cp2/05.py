@@ -9,7 +9,7 @@ for i in range(1, 6):
 
     if compra > 100:
         superior_100 += 1
-    if compra < 50:
+    elif compra < 50:
         inferior_50 += 1
 
 if total_compras <= 0:

@@ -1,4 +1,3 @@
-
 impares = 0
 i = 0
 while True:

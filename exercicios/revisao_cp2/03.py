@@ -21,7 +21,7 @@ while True:
         comanda += 1
         print(f"---------------- Comanda {comanda} -------------------")
         while True:
-            codigo = int(input("Insira o código da refeição desejada: "))
+            codigo = int(input("Insira o código da refeição desejada: (0 para fechar a conta.)"))
             match codigo:
                 case 0:
                     break
