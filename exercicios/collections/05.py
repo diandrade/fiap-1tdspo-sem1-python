@@ -17,6 +17,7 @@ Depois da lista criada, exiba todos os funcionários com seus dados um debaixo d
 OBS: o programa deverá solicitar que o usuário informe os dados para alimentar a lista de dicionários.
 '''
 funcionarios = []
+total_notas = 0
 
 print("--- Dados dos Funcionários ---")
 for alunos in range(10):
@@ -25,11 +26,10 @@ for alunos in range(10):
     disciplina = input("Insira a disciplina que o funcionário está cadastrado: ")
     faltas = input("Insira as faltas do funcionário: ")
 
-    nota_checkpoint1 = float(input("Insira a nota do checkpoint 1: "))
-    nota_checkpoint2 = float(input("Insira a nota do checkpoint 2: "))
-    nota_checkpoint3 = float(input("Insira a nota do checkpoint 3: "))
+    for i in range(3):
+        nota_checkpoint = float(input(f"Insira a nota do checkpoint {i + 1}: "))
+        total_notas += nota_checkpoint
 
-    total_notas = nota_checkpoint1 + nota_checkpoint2 + nota_checkpoint3
     media_notas = total_notas / 3
 
     dicionario = {'Nome': nome, 'Curso': curso, 'Disciplina': disciplina, 'Faltas': faltas, 'Checkpoint': media_notas}

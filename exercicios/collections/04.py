@@ -5,7 +5,7 @@ A inserção das palavras deverá ser executada até que o usuário digite uma o
 Após a inserção, exiba a tradução em português de uma determinada palavra em inglês que o usuário deverá digitar.
 '''
 
-palavras = []
+'''palavras = []
 
 print("--- Cadastro de Palavras ---")
 while True:
@@ -34,3 +34,38 @@ if len(palavras) == 0:
 else:
     for palavra in palavras:
         print(f"Português: {palavra['Português']} | Inglês: {palavra['Inglês']}")
+'''
+
+lista_ingles = []
+lista_portugues = []
+
+resp = 1
+
+# Loop para adicionar palavras ao dicionário
+while resp == 1:
+    palavra_ingles = input("Digite a palavra em Inglês: ")
+    lista_ingles.append(palavra_ingles)
+
+    palavra_portugues = input("Digite a palavra em Português: ")
+    lista_portugues.append(palavra_portugues)
+
+    # Pergunta se deseja continuar - CUIDADO: pode dar erro se digitar algo não numérico
+    resp = int(input("Deseja continuar? (1 - SIM, 0 - NÃO): "))
+
+# Loop para buscar traduções
+while True: # Adicionado um loop para permitir múltiplas buscas
+    palavra_ingles_usr = input("\nDigite a palavra em inglês que deseja saber a tradução (ou digite 'sair' para terminar): ")
+
+    if palavra_ingles_usr.lower() == 'sair': # Opção para sair do loop de busca
+        break
+
+    if palavra_ingles_usr in lista_ingles:
+        # Encontra o índice da primeira ocorrência da palavra na lista inglesa
+        indice = lista_ingles.index(palavra_ingles_usr)
+        # Usa o mesmo índice para buscar a palavra correspondente na lista portuguesa
+        print(f"A tradução para português é: {lista_portugues[indice]}")
+    else:
+        # Informa se a palavra não foi encontrada
+        print("A palavra não consta no dicionário.")
+
+print("\nPrograma finalizado.")
