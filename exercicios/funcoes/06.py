@@ -8,7 +8,6 @@ A função deverá retornar o valor da prestação.
 '''
 
 
-
 def valor_pagamento(valor_prestacao, nmr_dias_em_atraso):
     if nmr_dias_em_atraso == 0:
         return valor_prestacao
@@ -17,8 +16,8 @@ def valor_pagamento(valor_prestacao, nmr_dias_em_atraso):
         juros = valor_prestacao * 0.001 * nmr_dias_em_atraso
         return valor_prestacao + multa + juros
 
+
 valor_prestacao = float(input("Insira o valor da prestação: "))
 nmr_dias_em_atraso = float(input("Insira o número de dias em atraso: "))
 
 print(f"Valor a pagar: R${valor_pagamento(valor_prestacao, nmr_dias_em_atraso):.2f}")
-
